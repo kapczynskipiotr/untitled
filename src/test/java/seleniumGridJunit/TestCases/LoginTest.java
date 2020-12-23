@@ -33,14 +33,14 @@ public class LoginTest extends Base {
         Assert.assertEquals("page title is not correct", result, "Allegro - atrakcyjne ceny");
     }
 
-    @Test
-    public void elektronikaTest() {
-
-
-        homePagePage.goToElektronikaTab();
-        String Title = driver.getTitle();
-        Assert.assertEquals("page title is incorrect", Title, "na potrzeby nauki blad");
-    }
+//    @Test
+//    public void elektronikaTest() {
+//
+//
+//        homePagePage.goToElektronikaTab();
+//        String Title = driver.getTitle();
+//        Assert.assertEquals("page title is incorrect", Title, "na potrzeby nauki blad");
+//    }
     @After
     public void tearDown(){
         driver.quit();
