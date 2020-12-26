@@ -17,14 +17,19 @@ public class Base extends BrowserStackConfig{
     public Base(){
     }
     public static void initialization() throws MalformedURLException {
+        System.setProperty("webdriver.chrome.driver", "C:\\Users\\Piotrek\\IdeaProjects\\SeleniumJava.com\\src\\resources\\driver\\chromedriver.exe");
 
-        String browser = System.getProperty("browser");
-        if (browser.equals("chrome")) {
-            System.setProperty("webdriver.chrome.driver", "C:\\Users\\Piotrek\\IdeaProjects\\SeleniumJava.com\\src\\resources\\driver\\chromedriver.exe");
-            driver = new ChromeDriver();
-        } else if (browser.equals("firefox")) {
-            System.setProperty("webdriver.gecko.driver", "C:\\Users\\Piotrek\\IdeaProjects\\untitled\\src\\test\\resources\\geckodriver.exe");
-            driver = new FirefoxDriver();
+        ChromeOptions chromeOptions = new ChromeOptions();
+        chromeOptions.addArguments("--lang= pl-PL");
+
+        driver = new ChromeDriver();
+//        String browser = System.getProperty("browser");
+//        if (browser.equals("chrome")) {
+//            System.setProperty("webdriver.chrome.driver", "C:\\Users\\Piotrek\\IdeaProjects\\SeleniumJava.com\\src\\resources\\driver\\chromedriver.exe");
+//            driver = new ChromeDriver();
+//        } else if (browser.equals("firefox")) {
+//            System.setProperty("webdriver.gecko.driver", "C:\\Users\\Piotrek\\IdeaProjects\\untitled\\src\\test\\resources\\geckodriver.exe");
+//            driver = new FirefoxDriver();
 
 
 //        } else if (browser.equals("browserstack")) {
@@ -46,4 +51,4 @@ public class Base extends BrowserStackConfig{
         }
 
     }
-}
+
